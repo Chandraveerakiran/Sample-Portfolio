@@ -1,0 +1,173 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f8ff, #e0ffff); /* Light gradient */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1e90ff; /* Blue background */
+    color: white;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #00bfff; /* Brighter blue on hover */
+}
+.content {
+    max-width: 800px;
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    margin-top: 80px; /* Space for fixed nav */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.content.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%); /* Ensure it’s centered */
+}
+.content.hidden {
+    transform: translateX(-50%) translateY(-20px);
+}
+h1 {
+    font-size: 36px;
+    color: #1e90ff;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #87cefa; /* Light blue underline */
+    padding-bottom: 10px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+h1:hover {
+    color: #00bfff; /* Brighter blue on hover */
+    border-color: #00bfff;
+}
+h2 {
+    font-size: 28px;
+    color: #1e90ff;
+    border-bottom: 2px solid #87cefa; /* Light blue underline */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+h2:hover {
+    color: #00bfff; /* Brighter blue on hover */
+    border-color: #00bfff;
+}
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+.buttons a {
+    text-decoration: none;
+    color: white;
+    background-color: #1e90ff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.buttons a:hover {
+    background-color: #00bfff; /* Brighter blue on hover */
+    transform: scale(1.05); /* Slight scale effect */
+}
+footer {
+    background-color: #1e90ff;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px 12px 0 0;
+    transition: background-color 0.3s ease;
+}
+footer:hover {
+    background-color: #00bfff; /* Brighter blue on hover */
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+footer a:hover {
+    color: #f0f8ff; /* Light blue on hover */
+}
+.card {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    cursor: pointer;
+}
+.card:hover {
+    background-color: #e0ffff; /* Light blue on hover */
+}
+#game {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+#game button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#game button:hover {
+    background-color: #00bfff; /* Brighter blue on hover */
+    transform: scale(1.05); /* Slight scale effect */
+}
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('about')">About Me</a>
+        <a href="#" onclick="showSection('projects')

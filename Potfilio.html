@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVK's Portfolio</title>
+    <link rel="stylesheet" href="Colour.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('about')">About Me</a>
+        <a href="#" onclick="showSection('projects')">Projects</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+    </nav>
+    <div class="content active" id="home">
+        <h1>CVK's Portfolio</h1>
+        <p>Welcome to my portfolio! I’m Chandra Veera Kiran, a passionate programmer and tech enthusiast. I specialize in Java programming, Data Structures & Algorithms, and I’m dedicated to continuous learning and improvement. This portfolio showcases my journey, projects, and skills.</p>
+        <div class="buttons">
+            <a href="#" onclick="showSection('projects')">View My Projects</a>
+            <a href="#" onclick="showSection('contact')">Contact Me</a>
+        </div>
+    </div>
+    <div class="content" id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Chandra Veera Kiran! I'm passionate about programming and love creating projects that solve real-world problems. My interests include Java programming, Data Structures & Algorithms, and sharing knowledge through my YouTube channel "CVK Tech." I enjoy learning new technologies and continuously improving my skills.</p>
+    </div>
+    <div class="content" id="projects">
+        <h2>Projects</h2>
+        <div class="card" onclick="showGame()">
+            <h3>Rock-Paper-Scissors Game</h3>
+            <p>Click to play the Rock-Paper-Scissors game!</p>
+        </div>
+        <div id="game" style="display: none;">
+            <h3>Rock-Paper-Scissors</h3>
+            <button onclick="playGame('rock')">Rock</button>
+            <button onclick="playGame('paper')">Paper</button>
+            <button onclick="playGame('scissors')">Scissors</button>
+            <div id="result"></div>
+        </div>
+    </div>
+    <div class="content" id="contact">
+        <h2>Contact</h2>
+        <p>If you would like to get in touch, please feel free to contact me via email at <a href="mailto:your.email@example.com">your.email@example.com</a>. I’m always open to discussing new projects or opportunities!</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 CVK's Portfolio | <a href="mailto:your.email@example.com">Contact Me</a></p>
+    </footer>
+    <script src="javas.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
